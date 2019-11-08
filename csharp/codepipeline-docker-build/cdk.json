@@ -1,0 +1,3 @@
+{
+  "app": "dotnet src/CodepipelineDockerBuild/bin/Debug/netcoreapp3.0/CodepipelineDockerBuild.dll"
+}
