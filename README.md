@@ -87,6 +87,7 @@ $ cdk destroy
 | [application-load-balancer](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/application-load-balancer/) | Using an AutoScalingGroup with an Application Load Balancer |
 | [appsync-graphql-dynamodb](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/appsync-graphql-dynamodb/) | Creating a single GraphQL API with an API Key, and four Resolvers doing CRUD operations over a single DynamoDB |
 | [classic-load-balancer](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/classic-load-balancer/) | Using an AutoScalingGroup with a Classic Load Balancer |
+| [codepipeline-docker-build](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/codepipeline-docker-build/) | Shows how to create a docker build using Code Pipeline |
 | [custom-resource](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/custom-resource/) | Shows adding a Custom Resource to your CDK app |
 | [ecs-cluster](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/ecs/cluster/) | Provision an ECS Cluster with custom Autoscaling Group configuration |
 | [ecs-load-balanced-service](https://github.com/aws-samples/aws-cdk-examples/tree/master/python/ecs/ecs-load-balanced-service/) | Starting a container fronted by a load balancer on ECS |
