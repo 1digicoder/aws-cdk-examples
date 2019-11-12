@@ -6,12 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Amazon.CDK" Version="1.15.0-devpreview" />
-    <PackageReference Include="Amazon.CDK.AWS.S3" Version="1.15.0-devpreview" />
-    <PackageReference Include="Amazon.CDK.AWS.SSM" Version="1.15.0-devpreview" />
-    <PackageReference Include="Amazon.CDK.AWS.IAM" Version="1.15.0-devpreview" />
-    <PackageReference Include="Amazon.CDK.AWS.ECR" Version="1.15.0-devpreview" />
-    <PackageReference Include="Amazon.CDK.AWS.CodeBuild" Version="1.15.0-devpreview" />
+    <PackageReference Include="Amazon.CDK" Version="1.16.0-devpreview" />
+    <PackageReference Include="Amazon.CDK.AWS.S3" Version="1.16.0-devpreview" />
+    <PackageReference Include="Amazon.CDK.AWS.SSM" Version="1.16.0-devpreview" />
+    <PackageReference Include="Amazon.CDK.AWS.IAM" Version="1.16.0-devpreview" />
+    <PackageReference Include="Amazon.CDK.AWS.ECR" Version="1.16.0-devpreview" />
+    <PackageReference Include="Amazon.CDK.AWS.CodeBuild" Version="1.16.0-devpreview" />
   </ItemGroup>
 
 </Project>

@@ -64,19 +64,7 @@ namespace CodepipelineDockerBuild
                     {
                         // TODO: Resolve when JSII bug is fixed
                         // Due to JSII bug, need to do a substitution instead of natural call
-                        //{ "ecr", new BuildEnvironmentVariable { Value=ecrRepo.RepositoryUri.ToString()} }, 
-                        { 
-                            "ecr", new BuildEnvironmentVariable 
-                            { 
-                                Value=Fn.Sub("${accountId}.dkr.ecr.${region}.amazonaws.com/${repoName}", 
-                                new Dictionary<string, string> 
-                                { 
-                                    { "accountId", Aws.ACCOUNT_ID}, 
-                                    { "region", Aws.REGION },
-                                    { "repoName", ecrRepo.RepositoryName }
-                                })
-                            }
-                        },
+                        { "ecr", new BuildEnvironmentVariable { Value=ecrRepo.RepositoryUri.ToString()} }, 
                         { 
                             "tag", new BuildEnvironmentVariable { Value="cdk"}
                         }
@@ -91,17 +79,7 @@ namespace CodepipelineDockerBuild
 
             // CodeBuild IAM permissions to interact with ECR
             //TODO: Also suffers from JSII bug
-            //ecrRepo.GrantPushPull(codeBuildDockerBuild as IGrantable,
-            ecrRepo.Grant(codeBuildDockerBuild as IGrantable,
-                "ecr:GetDownloadUrlForLayer",
-                "ecr:BatchCheckLayerAvailability",
-                "ecr:PutImage",
-                "ecr:InitiateLayerUpload",
-                "ecr:UploadLayerPart",
-                "ecr:CompleteLayerUpload",
-                "ecr:GetDownloadUrlForLayer",
-                "ecr:BatchGetImage",
-                "ecr:BatchCheckLayerAvailability");
+            ecrRepo.GrantPullPush(codeBuildDockerBuild as IGrantable);
 
             this.OutputProperties = new OutputProperties
             {
